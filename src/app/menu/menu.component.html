@@ -1,0 +1,19 @@
+
+    <div class="container-logo">
+        <img src="../assets/img/arkus-logo.png" alt="" class="img-logo">
+    </div>
+    <div class="title-container">
+        <h1 class="title">Code Challenge</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-danger" id="dropdownBasic1" ngbDropdownToggle>Menu de inicio</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem [routerLink]="['/']">Inicio</button>
+                    <button ngbDropdownItem [routerLink]="['/definitions-page']">Definiciones</button>
+                    <button ngbDropdownItem [routerLink]="['/examples-page']">Ejemplos practicos</button>
+                </div>
+            </div>
+        </div>
+    </div>

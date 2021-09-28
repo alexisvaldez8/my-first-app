@@ -1,31 +1,7 @@
 <div class="container">
-    <div class="title-container">
-        <h1>Hola, esta es mi primera aplicacion en MindTeams</h1>
+    <app-menu></app-menu>
+    <div class="description">
+        <p class="description-text">Mi nombre es Alexis Mercado y soy desarrollador Angular Frontend, y esta es mi
+            primer aplicacion dentro de MindTeams, donde encontraran conceptos teoricos y algunos ejemplos practicos</p>
     </div>
-    <div>
-        <h2 style="text-align: center;">Definiciones de conceptos</h2>
-    </div>
-    <div class="definition-container">
-        <div *ngFor="let d of definitions" class="">
-            <!-- <h3 class="definition-title">{{ d.title }}</h3> -->
-            <button class="btn btn-outline-info btn-styles" (click)="open(content, d.title)">{{ d.title }}</button>
-        </div>
-    </div>
-
-    <ng-template #content let-c="close" let-d="dismiss">
-        <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">{{modalTitle}}</h4>
-          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p class="definition-text">{{modalText}}</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Regresar</button>
-        </div>
-      </ng-template>
-      
-     
 </div>
