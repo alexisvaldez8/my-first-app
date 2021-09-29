@@ -22,6 +22,8 @@ export class DefinitionsPageComponent implements OnInit {
     { title: 'Interfaces', key: "interface"},
     { title: 'Polimorfismo', key: "polymorphism"},
     { title: 'API Web', key: "api"},
+    { title: 'Pruebas unitarias', key: "unit_test"},
+    { title: 'Manejo de errores', key: "mistakes"},
   ];
 
   public accessLevels = [
@@ -118,7 +120,10 @@ export class DefinitionsPageComponent implements OnInit {
       case "api":
         this.modalText = "Una API es un conjunto de definiciones y protocolos que se utiliza para desarrollar e integrar el software de las aplicaciones. API significa interfaz de programación de aplicaciones."  
         this.modalAdditional =  "Las API permiten que sus productos y servicios se comuniquen con otros, sin necesidad de saber cómo están implementados. Esto simplifica el desarrollo de las aplicaciones y permite ahorrar tiempo y dinero. Las API le otorgan flexibilidad; simplifican el diseño, la administración y el uso de las aplicaciones, y proporcionan oportunidades de innovación, lo cual es ideal al momento de diseñar herramientas y productos nuevos (o de gestionar los actuales)."  
-        break;
+      break;
+      case "unit_test":
+        this.modalText = "Las pruebas unitarias o unit testing son una forma de comprobar que un fragmento de código funciona correctamente. Es un procedimiento más de los que se llevan a cabo dentro de una metodología ágil de trabajo."  
+      break;
 
     }
     this.modalService.open(content);

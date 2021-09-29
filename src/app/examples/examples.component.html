@@ -1,4 +1,31 @@
 <div class="container">
     <app-menu></app-menu>
-<p>examples works!</p>
+    <div style="margin: 16px 0px;" class="row">
+        <div class="col input-group mb-3">
+            <div class="input-group-prepend">
+                <!-- <span class="input-group-text" id="inputGroup-sizing-default">Numero 1</span> -->
+            </div>
+            <input type="number" [(ngModel)]="num1" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default" placeholder="Numero 1">
+        </div>
+        <div class="col input-group mb-3">
+            <div class="input-group-prepend">
+                <!-- <span class="input-group-text" id="inputGroup-sizing-default">Numero 2</span> -->
+            </div>
+            <input type="number" [(ngModel)]="num2" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default" placeholder="Numero 2">
+        </div>
+        <div>
+            <button class="btn btn-danger" (click)="suma(num1, num2)">Sumar</button>
+        </div>
+
+    </div>
+    <div style="margin: 16px 0px;" class="row" *ngIf="titleResult !== ''">
+        <div class="col">
+            <span>{{titleResult}}</span>
+        </div>
+        <div class="col">
+            {{sumaResult}}
+        </div>
+    </div>
 </div>
