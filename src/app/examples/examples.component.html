@@ -1,16 +1,16 @@
 <div class="container">
     <app-menu></app-menu>
+    <h2 style="margin-top: 24px;">Herencia</h2>
     <div style="margin: 16px 0px;" class="row">
+
         <div class="col input-group mb-3">
             <div class="input-group-prepend">
-                <!-- <span class="input-group-text" id="inputGroup-sizing-default">Numero 1</span> -->
             </div>
             <input type="number" [(ngModel)]="num1" class="form-control" aria-label="Default"
                 aria-describedby="inputGroup-sizing-default" placeholder="Numero 1">
         </div>
         <div class="col input-group mb-3">
             <div class="input-group-prepend">
-                <!-- <span class="input-group-text" id="inputGroup-sizing-default">Numero 2</span> -->
             </div>
             <input type="number" [(ngModel)]="num2" class="form-control" aria-label="Default"
                 aria-describedby="inputGroup-sizing-default" placeholder="Numero 2">
@@ -22,10 +22,34 @@
     </div>
     <div style="margin: 16px 0px;" class="row" *ngIf="titleResult !== ''">
         <div class="col">
-            <span>{{titleResult}}</span>
+            <span class="title-result">{{titleResult}}</span>
         </div>
-        <div class="col">
+        <div class="col title-result">
             {{sumaResult}}
         </div>
+    </div>
+
+    <h2>Pruebas unitarias</h2>
+    <div class="container__buttons">
+        <button class="btn btn-danger" (click)="getUsers()">Ver usuarios</button>
+        <button class="btn btn-danger" (click)="getUsersWithError()">Ver usuarios error</button>
+    </div>
+
+    <ul class="container__users">
+        <li class="user" *ngFor="let user of users">{{ user.name }}</li>
+    </ul>
+
+    <p class="container__error" *ngIf="error">Error!!!!</p>
+
+    <h2>Interfaces</h2>
+    <div class="container__buttons">
+        <button class="btn btn-danger" (click)="addAuto()">Agregar coche</button>
+
+    </div>
+    <div class="container__users" *ngFor="let c of coches">
+        <p class="user">{{ c.marca }}</p>
+        <p class="user">{{ c.subMarca }}</p>
+        <p class="user">{{ c.modelo }}</p>
+        <p class="user">{{ c.tipo }}</p>
     </div>
 </div>

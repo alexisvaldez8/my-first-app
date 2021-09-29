@@ -119,12 +119,14 @@ export class DefinitionsPageComponent implements OnInit {
       break;
       case "api":
         this.modalText = "Una API es un conjunto de definiciones y protocolos que se utiliza para desarrollar e integrar el software de las aplicaciones. API significa interfaz de programación de aplicaciones."  
-        this.modalAdditional =  "Las API permiten que sus productos y servicios se comuniquen con otros, sin necesidad de saber cómo están implementados. Esto simplifica el desarrollo de las aplicaciones y permite ahorrar tiempo y dinero. Las API le otorgan flexibilidad; simplifican el diseño, la administración y el uso de las aplicaciones, y proporcionan oportunidades de innovación, lo cual es ideal al momento de diseñar herramientas y productos nuevos (o de gestionar los actuales)."  
+        this.modalAdditional =  "Las API permiten que sus productos y servicios se comuniquen con otros, sin necesidad de saber cómo están implementados. Esto simplifica el desarrollo de las aplicaciones y permite ahorrar tiempo y dinero. Las API le otorgan flexibilidad; simplifican el diseño, la administración y el uso de las aplicaciones, y proporcionan oportunidades de innovación, lo cual es ideal al momento de diseñar herramientas y productos nuevos (o de gestionar los actuales). Existen herramientas para probar las web APIs como Insomnia y Postman "  
       break;
       case "unit_test":
         this.modalText = "Las pruebas unitarias o unit testing son una forma de comprobar que un fragmento de código funciona correctamente. Es un procedimiento más de los que se llevan a cabo dentro de una metodología ágil de trabajo."  
       break;
-
+      case "mistakes":
+        this.modalText = "En los entornos de programación más recientes se ha desarrollado una forma alternativa de manejar los errores, conocida como manejo de excepciones, la cual funciona generando una excepción tan pronto aparece un error. El sistema fuerza un salto hacia el bloque de excepciones más cercano del código en el cual se toman las acciones apropiadas tendientes a solucionar o alertar acerca del error producido. El sistema provee un 'manejador' estándar por defecto que toma todas las excepciones y que muestra los mensajes de error, deteniendo la ejecución del programa."  
+      break;
     }
     this.modalService.open(content);
   }
